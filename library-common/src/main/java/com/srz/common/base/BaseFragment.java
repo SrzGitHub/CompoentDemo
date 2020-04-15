@@ -41,6 +41,7 @@ import androidx.fragment.app.Fragment;
 public abstract class BaseFragment extends Fragment {
 
 
+    private Bundle bundle;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -54,4 +55,12 @@ public abstract class BaseFragment extends Fragment {
 
     protected  abstract  int layoutId();
     protected abstract void init();
+    public Bundle getBundle() {
+        return bundle;
+    }
+
+    public void setBundle(Bundle mbundle) {
+        this.bundle = mbundle;
+    }
+
 }

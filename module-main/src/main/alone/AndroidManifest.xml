@@ -3,7 +3,7 @@
     package="com.srz.main">
 
     <application
-        android:name="com.goldze.base.debug.DebugApplication"
+        android:name="com.srz.common.debug.DebugApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/main_name"
@@ -18,6 +18,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.goldze.main.ui.MainActivity"></activity>
+        <activity android:name="com.srz.main.ui.MainActivity">
+
+        </activity>
     </application>
 </manifest>

@@ -15,6 +15,15 @@
 
 
 
+        <activity android:name="com.srz.main.ui.SplashActivity"
+            android:theme="@style/AppTheme.Start">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
     </application>
 
 </manifest>

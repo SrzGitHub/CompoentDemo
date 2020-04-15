@@ -1,15 +1,17 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.debug.home">
 
     <application
         android:name="com.srz.common.debug.DebugApplication"
         android:allowBackup="true"
-        android:icon="@mip"
+        android:icon="@mipmap/ic_launcher"
         android:label="@string/home_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".debug.DebugActivity">
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name="com.srz.home.debug.DebugActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

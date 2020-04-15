@@ -15,7 +15,6 @@ import java.util.List;
  */
 @Route(path = RouterActivityPath.Main.PAGER_MAIN)
 public class MainActivity extends BaseActivity {
-    private List<Fragment> mFragments;
 
 
     @Override
