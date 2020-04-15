@@ -8,7 +8,6 @@ import com.srz.common.base.IModuleInit;
 
 
 /**
- * Created by goldze on 2018/6/21 0021.
  * 作为组件生命周期初始化的配置类，通过反射机制，动态调用每个组件初始化逻辑
  */
 

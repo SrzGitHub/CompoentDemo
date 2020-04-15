@@ -2,13 +2,14 @@
 
 buildscript {
     repositories {
+        maven { url "https://jitpack.io" }
         google()
         jcenter()
 
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.5.0'
-
+        classpath 'com.jakewharton:butterknife-gradle-plugin:10.2.0'
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
@@ -18,6 +19,10 @@ allprojects {
     repositories {
         google()
         jcenter()
+        maven { url "https://jitpack.io" }
+        flatDir {
+            dirs 'libs'
+        }
 
     }
 }
@@ -29,12 +34,18 @@ task clean(type: Delete) {
 
 ext {
 
-    compileSdkVersion = 29
-    buildToolsVersion = "29.0.2"
-    minSdkVersion = 21
-    targetSdkVersion = 29
-    versionCode = 1
-    versionName = "1.0"
+    compileSdkVersion   = 29
+    buildToolsVersion   = "29.0.2"
+    minSdkVersion       = 21
+    targetSdkVersion    = 29
+    versionCode         = 1
+    versionName         = "1.0"
+
+    appcompat           = '1.1.0'
+    arouter_api         ='1.4.1'
+    junit               ='4.12'
+
+    arouter_compiler    ='1.2.2'
 
 
 }

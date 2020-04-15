@@ -1,11 +1,18 @@
 package com.srz.common.base;
 
+import android.os.Build;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+
+import com.srz.common.R;
+import com.srz.common.utils.StatusBarUtil;
+
+import butterknife.ButterKnife;
 
 /**
  * //                    .::::.
@@ -43,8 +50,9 @@ public abstract class BaseActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        setWindowWhite();
         setContentView(getLayoutId());
+        ButterKnife.bind(this);
         init();
         loadData();
 
@@ -53,6 +61,16 @@ public abstract class BaseActivity extends AppCompatActivity {
     protected abstract int getLayoutId();
     protected abstract void init();
     protected abstract void loadData();
+
+    public void setWindowWhite() {
+        //                实现状态栏图标和文字颜色为浅色
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN | View.SYSTEM_UI_FLAG_LAYOUT_STABLE);
+            getWindow().getDecorView().findViewById(android.R.id.content).setPadding(0, 0, 0, 0);
+        }
+        StatusBarUtil.setStatusBarColor(this, R.color.transparent);
+
+    }
 
     /**
      * 切换Fragment的方法
