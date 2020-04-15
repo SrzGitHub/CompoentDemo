@@ -1,0 +1,2 @@
+include ':app', ':library-common', ':module-home', ':library-res', ':module-main'
+rootProject.name='AndroidComponentsDemo'
