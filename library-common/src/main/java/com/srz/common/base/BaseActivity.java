@@ -46,7 +46,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         loadData();
 
     }
-
+    //获取布局ID
     protected abstract int getLayoutId();
     protected abstract void init();
     protected abstract void loadData();
