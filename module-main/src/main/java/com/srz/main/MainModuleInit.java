@@ -34,6 +34,7 @@ import com.srz.common.utils.SLog;
  * <p>
  * 2020/04/15 12:16 星期三
  **/
+
 public class MainModuleInit implements IModuleInit {
     @Override
     public boolean onInitAhead(Application application) {

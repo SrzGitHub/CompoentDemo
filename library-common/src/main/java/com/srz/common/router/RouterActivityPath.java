@@ -16,6 +16,13 @@ public class RouterActivityPath {
         public static final String PAGER_MAIN = MAIN +"/Main";
     }
 
+    //首页业务组件
+    public static class Home{
+        private static final String HOME = "/home";
+        public static final String PAGER_HOME =HOME+"/Home";
+    }
+
+
     /**
      * 身份验证组件
      */
